@@ -1,0 +1,734 @@
+:root{
+    --bgcolor: #ffffff;
+    --button_primary: #45CB85;
+    --button_secondary: #6D9DC5;
+}
+
+
+body{
+    font-size: 2em;
+    font-family: 'Montserrat';
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+}
+
+h1{
+    text-align: center;
+}
+
+h3{
+    margin: 0 30 0 0px;
+}
+
+input{
+    border: 0px;
+    border-radius: 7px;
+    padding: 1em;
+    font-size: 1rem;
+    width: 100%;
+    
+}
+
+input[type=submit]{
+    border-radius: 50px;
+    background: none;
+    border: 2px solid black;
+}
+
+input[type=submit]:hover{
+    background: var(--button_secondary);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+header>img{
+    width: 2em;
+}
+
+.sign {
+    border: 1px solid black;
+    font-size: 20px;
+    padding: 1rem 2rem;
+    border-radius: 1em;
+    min-width: fit-content;
+    margin: 8px;
+}
+
+.sign a{
+    text-decoration: none;
+    color: black;
+}
+
+.sign:hover{
+    cursor: pointer;
+    background: var(--button_primary);
+    border: none;
+}
+
+.sign:hover a{
+    color: white;
+}
+
+
+.searchbar{
+    display: flex;
+    background: rgba(128, 128, 128, 0.425);
+    padding: 0 10px;
+    border-radius: 0.5em;
+    margin: 0;
+}
+.searchbar img{
+    width: 1.25em;
+    margin-right: 4px;
+}
+.searchbar input{
+    width: 40em;
+    background: none;
+}
+.searchbar input:active, input:focus{
+    border: 0px;
+}
+
+.inputs{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.changebg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(31, 22, 22, 0.425);
+    display: none;
+    z-index: 10;
+}
+
+.sign_forms{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    justify-items: center;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid black;
+    width: 455px;
+    display: none;
+    max-height: 580px;
+    z-index: 11;
+}
+.close_tag{
+    position: absolute;
+    cursor: pointer;
+    width: 0.75em;
+    right: 1%;
+}
+
+.close_tag img{
+    width: 100%;
+}
+
+.page_info{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.left_content{
+    width: 40%;
+    text-align: center;
+}
+
+.info_sign{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+
+.chat{
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--button_primary);
+    padding: 0.5rem 1em;
+    border-radius: 0.5em;
+}
+
+.chat img{
+    width: 2rem;
+    margin-right: 5px;
+}
+
+.shopping_cart img{
+    width: 100%;
+}
+
+.user, .shopping_cart{
+    cursor: pointer;
+    width:2em;
+}
+
+.container_articulos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.child{
+    width: 20%;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 10px;
+    -webkit-box-shadow: 6px 21px 36px 14px rgba(0,0,0,0.54); 
+    box-shadow: 6px 21px 36px 14px rgba(0,0,0,0.30);
+    text-align: center;
+    display: block;
+    justify-content: center;
+    position: relative;
+}
+
+.img_container{
+    width: 10rem;
+    height: 10rem;
+    margin-right: auto;
+    margin-left: auto;
+    overflow: hidden;
+    border-radius: 6px;
+    border: solid 6px var(--button_secondary);
+}
+
+.img_container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.add_object{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 100%;
+    background-color: var(--button_primary);
+    position: fixed;
+    bottom: 1rem;
+    right: 10;
+    z-index: 999999;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.add_object_animation{
+    animation: rotate-out-center 0.5s linear;
+}
+
+@keyframes rotate-out-center {
+    0% {
+      -webkit-transform: rotate(0);
+      transform: rotate(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: rotate(-360deg);
+      transform: rotate(-360deg);
+      opacity: 0;
+    }
+}
+
+.add_object img{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.item_form{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 10px;
+    border: 3px solid var(--button_secondary);
+    font-size: 20px;
+    padding: 10px;
+    display: none;
+    z-index: 11;
+}
+
+.item_form label{
+    margin-right: 10px;
+}
+
+.item_form input{
+    width: 100%;
+    font-family: 'Montserrat';
+    font-size: 20px;
+}
+
+.item_form select{
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Montserrat';
+}
+
+textarea{
+    width: 100%;
+    height: 100px;
+    font-family: 'Montserrat';
+    font-size: 18px;
+}
+
+.main_info{
+    display: block;
+    justify-content: center;
+    width: 60%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    align-self: center;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.buy_button{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: var(--button_secondary);
+}
+
+.buy_button a{
+    text-decoration: none;
+    color: white;
+}
+
+.buy_button:hover{
+    animation: scale_up_button 0.5s infinite alternate linear;
+}
+
+@keyframes scale_up_button{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.10);
+    }
+    100%{
+        transform: scale(1.15);
+    }
+}
+
+.my_items{
+    display: flex;
+    overflow: auto;
+}
+
+#user_img{
+    width: 18rem;
+    margin-right: 10px;
+}
+
+::-webkit-scrollbar{
+    width: auto;
+}
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: var(--button_secondary);
+    border-radius: 10px;
+}
+
+.shopping_cart{
+    position: relative;
+}
+
+.dropdown_shopping{
+    position: absolute;
+    display: none;
+    --webkit-box-shadow: 0px 9px 23px 12px rgba(0,0,0,0.62); 
+    box-shadow: 0px 9px 23px 12px rgba(0,0,0,0.62);
+    border-radius: 0px 0px 10px 10px;
+}
+
+.itemToBuy{
+    display: flex;
+    min-width: 150px;
+    overflow: hidden;
+    font-size: 18px;
+    padding: 3px;
+    border-radius: 5px;
+}
+.itemToBuy img{
+    width: 3rem;
+    margin-right: 10px;
+}
+
+.shopping_cart:hover .dropdown_shopping{
+    display: block;
+}
+
+.vendido{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(59, 59, 59, 0.548);
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    z-index: 9;
+}
+
+.vendido span{
+    color: #ffffff;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%);
+}
+
+.buy_items{
+    background-color: var(--button_primary);
+    align-items: center;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.buyIt{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+    background-color: var(--button_secondary);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.buyIt:hover{
+    cursor: pointer;
+}
+
+.buyIt img{
+    width: 20%;
+}
+
+.buy_items a{
+    text-decoration: none;
+    color: black;
+}
+
+.filter{
+    display: flex;
+    align-items: center;
+}
+
+
+.filter_inputs{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-right: 30px;
+}
+
+.filter_inputs select{
+    width: auto;
+    padding: 10px;
+    margin-left: 10px;
+    height: 100%;
+    font-size: 14px;
+}
+
+.filter_inputs input{
+    width: auto;
+    border: 1px solid var(--button_secondary);
+    margin: 0px 10px;
+}
+
+.filter_inputs:last-of-type{
+    background-color: var(--button_secondary);
+    border-radius: 10px;
+    font-family: 'Montserrat';
+    padding: 0px 10px;
+}
+
+.filter_inputs:last-of-type img{
+    width: 30px;
+}
+
+.buy_button form{
+    margin: 0;
+}
+
+.buy_button form input{
+    border: none;
+    font-family: "Montserrat";
+    font-size: 20px;
+    padding: 10px;
+}
+
+.confirmItem{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 2px solid black;
+    width: 50%;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.confirmItem img{
+    width: 10rem;
+    height: 15rem;
+    margin-right: 10px;
+}
+
+.confirmItem p{
+    text-align: justify;
+}
+
+.confirmButton{
+    margin-top: 10px;
+    font-family: "Montserrat";
+    font-size: 20px;
+    padding: 10px;
+    width: 300px;
+}
+
+.editItem_button{
+    background-color: var(--button_primary);
+    width: 20rem;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.editItem_button:hover{
+    cursor: pointer;
+    color: white;
+    animation: scale_up_button 0.5s infinite alternate linear;
+}
+
+.editItem_button p{
+    margin: 0;
+}
+
+.editItem_form{
+    width: 50rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 3px solid var(--button_primary);
+    padding: 10px;
+    display: none;
+    z-index: 12;
+}
+
+.editItem_form input{
+    font-family: "Montserrat";
+    font-size: 18px;
+}
+
+.editItem_form label{
+    margin-right: 10px;
+}
+
+.editItem_form select{
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Montserrat';
+}
+
+.user_info{
+    display: flex;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.user_options{
+    display: flex;
+    justify-content: center;
+}
+
+.user_options p{
+    background-color: var(--button_secondary);
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.user_options p:hover{
+    color: white;
+    animation: scale_up_button 0.5s infinite alternate linear;
+}
+
+.user_options p:last-of-type{
+    margin-left: 10px;
+    background-color: rgb(255, 67, 67);
+}
+
+.update_userInfo{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    z-index: 1;
+    border: 1px solid var(--button_secondary);
+    border-radius: 10px;
+    display: none;
+}
+
+.update_userInfo .inputs{
+    margin: 20px;
+}
+
+.deleteItem_button{
+    display: flex;
+    justify-content: center;
+}
+
+.deleteItem_button p{
+    background-color:  rgb(255, 67, 67);
+    width: fit-content;
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin: 3px;
+}
+
+.deleteItem_button p:hover{
+    cursor: pointer;
+    color: white;
+    animation: scale_up_button 0.5s infinite alternate linear;
+}
+
+.removeItemAlert{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    z-index: 12;
+    border-radius: 10px;
+}
+
+.deleteItemForm{
+    display: none;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    z-index: 13;
+}
+
+.deleteItemForm input[type=submit]{
+    background-color:  rgb(255, 67, 67);
+}
+
+.user_admin{
+    display: flex;
+    align-items: center;
+    border: 4px solid var(--button_primary);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.user_admin img{
+    width: 8rem;
+    border: 1px solid var(--button_secondary);
+    padding: 10px;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+.user_admin p{
+    margin-right: 10px;
+}
+
+.chat_person{
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--button_secondary);
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.chat_msg{
+    justify-content: unset;
+    text-align: unset;
+
+}
+.chat_sended{
+    text-align: justify;
+    left: 0;
+    background-color:#6d9dc5a2;
+    margin: 10px 0;
+    padding: 5px;
+}
+
+.chat_recived{
+    display: flex;
+    justify-content: end;
+    background-color: rgba(133, 126, 126, 0.473);
+    margin: 10px 0;
+    padding: 5px;
+}
+
+.chat_recived p, .chat_sended p{
+    display: flex;
+    position: relative;
+    width: fit-content;
+    right: 0;
+    margin-right: 0px;
+    margin: 0px;
+    
+}
+
+.chat_recived p{
+    margin-left: auto;
+}
+
+.messageForm{
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: grey;
+}
+
+.send_message{
+    width: fit-content;
+    margin: 10 auto;
+}
+
+.send_message input:hover{
+    background-color: var(--button_primary);
+}
