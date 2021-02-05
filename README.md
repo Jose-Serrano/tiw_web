@@ -8,8 +8,8 @@ So, what do you need to test this program?
 1. Let's start buy downloading an IDE, I use Eclipse IDE: https://www.eclipse.org/downloads/ where you can import the downloaded project, or pull directly from this repository. However, you can use other IDE like STS or your most familiar.
 2. For this full stack development, I used mySql Workbench following the next schema:
    <img src="" alt="DB Schema"/>.
-3. I'm using GlashFish 5 server, so remember to download and add it to Eclipse IDE servers.
-4. Then start your GlashFish 5 server where you are going to add a JDBC Resource and a JDBC Connection Pool. Firstly, add the JDBC Connection Pool:
+3. I'm using GlassFish 5 server, so remember to download and add it to Eclipse IDE servers.
+4. Then start your GlassFish 5 server where you are going to add a JDBC Resource and a JDBC Connection Pool. Firstly, add the JDBC Connection Pool:
     - Resource Type: javax.sql.DataSource.
     - Datasource Classname: com.mysql.cj.jdbc.MysqlDataSource.
    Go to properties tab and set.
@@ -26,4 +26,4 @@ So, what do you need to test this program?
 ## Run
 Right click on the project you imported and select run -> run on server -> GlassFish 5!
 
-That's all! Feel free to make the changes you consider or adapt it to your web!
+That's all! Feel free to make the changes you consider or adapt it to your web. Just remember, this is an initial project to deep into fullStack development!.
